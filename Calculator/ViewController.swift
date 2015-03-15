@@ -15,12 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var operandDisplay: UILabel!
     
     var userIsInTheMiddleOfTypingANumber = false
-    
     var brain = CalculatorBrain()
-    
 
     @IBAction func appendDigit(sender: UIButton) {
         let digit = sender.currentTitle!
+        // userIsInTheMiddleOfTypingANumber clears display to get rid of leading 0 when entering numbers
         if userIsInTheMiddleOfTypingANumber {
             display.text = display.text! + digit
         } else {
@@ -29,7 +28,6 @@ class ViewController: UIViewController {
         }
         println("digit = \(digit)")
     }
-    
     
     @IBAction func operate(sender: UIButton) {
         let opCharacter = sender.currentTitle!
