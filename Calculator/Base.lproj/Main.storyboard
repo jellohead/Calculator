@@ -66,7 +66,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dg7-8w-2fU"/>
+                                    <action selector="appendOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nZ2-qJ-SXP"/>
+                                    <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nzD-Zf-ra4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NA4-rQ-4n2">
@@ -126,6 +127,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="appendOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BGl-zJ-5tC"/>
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p8q-mh-IXG"/>
                                 </connections>
                             </button>
@@ -136,6 +138,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="appendOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tdV-CX-fRc"/>
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qw5-0b-hKW"/>
                                 </connections>
                             </button>
@@ -146,17 +149,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="appendOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5Q-Q5-MqJ"/>
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fO-so-15z"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwj-Vz-LS3">
-                                <rect key="frame" x="472" y="200" width="104" height="126"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="cos">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mjW-Pt-9vw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C41-iE-dWa">
@@ -164,7 +158,8 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
                                 <state key="normal" title="π"/>
                                 <connections>
-                                    <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D0i-pi-T0z"/>
+                                    <action selector="appendOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NNh-LM-CfH"/>
+                                    <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Gx-Ex-tMm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8d-aS-Fx2">
@@ -174,6 +169,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="appendOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6FO-mR-FrA"/>
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hWR-IX-Lfd"/>
                                 </connections>
                             </button>
@@ -214,6 +210,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="appendOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4yN-5V-N9l"/>
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXe-Y5-Vc7"/>
                                 </connections>
                             </button>
@@ -224,6 +221,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="appendOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zGp-xp-2xG"/>
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qC1-AB-PzF"/>
                                 </connections>
                             </button>
@@ -244,7 +242,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5v-sl-m8W">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5v-sl-m8W">
                                 <rect key="frame" x="239" y="63" width="337" height="39"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -253,6 +251,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwj-Vz-LS3">
+                                <rect key="frame" x="472" y="200" width="104" height="126"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="cos">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="appendOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F3D-Eh-1bg"/>
+                                    <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mjW-Pt-9vw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

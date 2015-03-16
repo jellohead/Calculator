@@ -19,7 +19,6 @@ class ViewController: UIViewController {
 
     @IBAction func appendDigit(sender: UIButton) {
         let digit = sender.currentTitle!
-        // userIsInTheMiddleOfTypingANumber clears display to get rid of leading 0 when entering numbers
         if userIsInTheMiddleOfTypingANumber {
             display.text = display.text! + digit
         } else {
@@ -28,13 +27,20 @@ class ViewController: UIViewController {
         }
         println("digit = \(digit)")
     }
+
+    @IBAction func appendOperand(sender: UIButton) {
+        let operand = sender.currentTitle!
+        //if userIsInTheMiddleOfTypingANumber {
+            operandDisplay.text = operandDisplay.text! + operand
+        //} else {
+        //    operandDisplay.text = operand
+        //    userIsInTheMiddleOfTypingANumber = true
+        //}
+        println("operand = \(operand)")
+    }
     
     @IBAction func operate(sender: UIButton) {
         let opCharacter = sender.currentTitle!
-        if userIsInTheMiddleOfTypingANumber {
-            enter()
-        }
-        operandDisplay.text = operandDisplay.text! + opCharacter
         if let operation = sender.currentTitle  {
             if let result = brain.performOperation(operation) {
                 displayValue = result
@@ -60,6 +66,16 @@ class ViewController: UIViewController {
         set {
             display.text = "\(newValue)"
             userIsInTheMiddleOfTypingANumber = false
+        }
+    }
+    
+    var opDisplayValue: String {
+        get {
+            return operandDisplay.text!
+        }
+        set {
+            
+            
         }
     }
 }
