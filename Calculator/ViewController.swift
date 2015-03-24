@@ -19,6 +19,7 @@ class ViewController: UIViewController {
 
     @IBAction func appendDigit(sender: UIButton) {
         let digit = sender.currentTitle!
+        println("digit has been hit = \(digit)")
         if userIsInTheMiddleOfTypingANumber {
             display.text = display.text! + digit
         } else {
@@ -31,8 +32,13 @@ class ViewController: UIViewController {
 
     @IBAction func appendOperand(sender: UIButton) {
         let operand = sender.currentTitle!
+        if operand == "C" {
+            println("you hit the clear button")
+            operandDisplay.text = ""
+        } else {
         operandDisplay.text = operandDisplay.text! + operand
         println("operand = \(operand)")
+        }
     }
     
     @IBAction func operate(sender: UIButton) {
@@ -65,14 +71,5 @@ class ViewController: UIViewController {
         }
     }
     
-//    var opDisplayValue: String {
-//        get {
-//            return operandDisplay.text!
-//        }
-//        set {
-//            
-//            
-//        }
-//    }
 }
 
