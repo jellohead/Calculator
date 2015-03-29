@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var display: UILabel!
-
+    
     @IBOutlet weak var operandDisplay: UILabel!
     
     var userIsInTheMiddleOfTypingANumber = false
