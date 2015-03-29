@@ -11,17 +11,29 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var display: UILabel!
-    
+
     @IBOutlet weak var operandDisplay: UILabel!
     
     var userIsInTheMiddleOfTypingANumber = false
     var brain = CalculatorBrain()
+    var hasDecimal = false
 
     @IBAction func appendDigit(sender: UIButton) {
         let digit = sender.currentTitle!
         println("user entered a \(digit)")
     
         if userIsInTheMiddleOfTypingANumber {
+            if digit == "." && display.text == nil {
+                //set display.text to 0 to avoid crash
+                display.text = "0"
+            }
+            if digit == "." && hasDecimal == true {
+                println("Decimal already exists. Nothing to do")
+                return
+            } else if digit == "." && hasDecimal == false {
+                println("Added a decimal to your number")
+                hasDecimal = true
+            }
             display.text = display.text! + digit
         } else {
             display.text = digit
@@ -54,6 +66,7 @@ class ViewController: UIViewController {
 
     @IBAction func enter() {
         userIsInTheMiddleOfTypingANumber = false
+        hasDecimal = false
         if let result = brain.pushOperand(displayValue) {
             displayValue = result
         } else {
