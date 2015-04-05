@@ -45,12 +45,17 @@ class ViewController: UIViewController {
 
     @IBAction func appendOperand(sender: UIButton) {
         let operand = sender.currentTitle!
-        if (operand == "C" ) {
-            operandDisplay.text = ""
-        } else {
+//        if (operand == "C" ) {
+//            operandDisplay.text = ""
+//        } else {
         operandDisplay.text = operandDisplay.text! + operand
         println("operand = \(operand)")
-        }
+//        }
+    }
+    
+    
+    @IBAction func clearEverything(sender: UIButton) {
+        operandDisplay.text = " "
     }
     
     @IBAction func operate(sender: UIButton) {
@@ -73,6 +78,11 @@ class ViewController: UIViewController {
             displayValue = 0
         }
     }
+    
+    @IBAction func backSpace(sender: UIButton) {
+        // add in backspace function
+    }
+    
     
     var displayValue: Double {
         get {
