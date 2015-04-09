@@ -23,6 +23,7 @@ class ViewController: UIViewController {
             display.text = display.text! + digit
         } else {
             display.text = digit
+            enter()
             userIsInTheMiddleOfTypingANumber = true
         }
         println("digit = \(digit)")
@@ -30,17 +31,12 @@ class ViewController: UIViewController {
 
     @IBAction func appendOperand(sender: UIButton) {
         let operand = sender.currentTitle!
-        //if userIsInTheMiddleOfTypingANumber {
-            operandDisplay.text = operandDisplay.text! + operand
-        //} else {
-        //    operandDisplay.text = operand
-        //    userIsInTheMiddleOfTypingANumber = true
-        //}
+        operandDisplay.text = operandDisplay.text! + operand
         println("operand = \(operand)")
     }
     
     @IBAction func operate(sender: UIButton) {
-        let opCharacter = sender.currentTitle!
+        //let opCharacter = sender.currentTitle!
         if let operation = sender.currentTitle  {
             if let result = brain.performOperation(operation) {
                 displayValue = result
@@ -64,8 +60,12 @@ class ViewController: UIViewController {
             return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
         }
         set {
-            display.text = "\(newValue)"
+            let numberFormatter = NSNumberFormatter()
+            numberFormatter.numberStyle = .DecimalStyle
+            numberFormatter.maximumFractionDigits = 10
+            display.text = numberFormatter.stringFromNumber(newValue)
             userIsInTheMiddleOfTypingANumber = false
+
         }
     }
     
